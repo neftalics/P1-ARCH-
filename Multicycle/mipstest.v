@@ -30,7 +30,7 @@ module testbench();
   always@(negedge clk)
     begin
       if(memwrite) begin
-        if(adr === 80 && writedata === 7) begin
+        if(adr === 84 & writedata === 7) begin
           $display("Simulation succeeded");
           $finish;
         end else if (adr !== 80) begin
@@ -41,7 +41,7 @@ module testbench();
     end
 
     initial begin
-        $dumpfile("testbenchmulti.vcd");
+        $dumpfile("testbench.vcd");
         $dumpvars; 
     end
 

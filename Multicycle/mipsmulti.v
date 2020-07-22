@@ -211,7 +211,7 @@ module datapath(input          clk, reset,
   assign op = instr[31:26];
   assign funct = instr[5:0];
   assign writedata=B;
-  assign pcjump={pc[31:28],{pc[25:0],2'b00}};
+  assign pcjump={pc[31:28],{instr[25:0],2'b00}};
   // Your datapath hardware goes below.  Instantiate each of the submodules
   // that you need.  Remember that alu's, mux's and various other 
   // versions of parameterizable modules are available in mipsparts.sv
