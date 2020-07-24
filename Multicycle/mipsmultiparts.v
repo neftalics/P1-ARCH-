@@ -64,7 +64,7 @@ module floprx2 #(parameter WIDTH = 8)
   always @(posedge clk, posedge reset) begin
     if (reset) begin
       q0 <= 0;
-      q1 <= 1;
+      q1 <= 0;
     end
     else begin       
       q0 <= d0;
